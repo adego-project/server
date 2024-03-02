@@ -5,10 +5,14 @@ server:
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/${DB_URL}?serverTimezone=UTC&characterEncoding=UTF-8
+    url: jdbc:mysql://localhost:3306/adego?serverTimezone=UTC&characterEncoding=UTF-8
     hikari:
       username: root
       password: phj@3473
 
   main:
     allow-bean-definition-overriding: true
+
+  jpa:
+    hibernate:
+      ddl-auto: create
