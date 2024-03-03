@@ -1,5 +1,6 @@
 package com.adego.project.domain.auth.presentation.dto;
 
+import com.adego.project.domain.auth.presentation.dto.response.OAuth2Response;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.oauth2.core.user.OAuth2User;
@@ -27,6 +28,6 @@ public class CustomOAuth2User implements OAuth2User {
 
   @Override
   public String getName() {
-    return userDto.getUserName();
+    return userDto.getName();
   }
 }
