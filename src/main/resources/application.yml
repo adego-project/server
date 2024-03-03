@@ -16,3 +16,17 @@ spring:
   jpa:
     hibernate:
       ddl-auto: create
+
+  security:
+    oauth2:
+      client:
+        registration:
+          kakao:
+            client-id: d1a76fca632e9b7d19fdc8b357340cc5
+            client-secret: 36Oe7hfx7iPaiKpkTDFvtcO5VCEvAmUB
+            client-authentication-method: client_secret_post
+            redirect-uri: http://localhost:8080/login/oauth2/code/kakao
+            authorization-grant-type: authorization_code
+            scope:
+              - profile
+              - account_email
