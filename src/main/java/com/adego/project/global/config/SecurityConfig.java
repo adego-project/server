@@ -1,5 +1,7 @@
 package com.adego.project.global.config;
 
+import com.adego.project.domain.auth.service.CustomOAuth2UserService;
+import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.Customizer;
@@ -11,7 +13,9 @@ import org.springframework.security.web.SecurityFilterChain;
 
 @EnableWebSecurity
 @Configuration
+@RequiredArgsConstructor
 public class SecurityConfig {
+  private final CustomOAuth2UserService oAuth2UserService;
   @Bean
   public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
     http
@@ -23,6 +27,14 @@ public class SecurityConfig {
         auth -> auth
           .requestMatchers("/api/**").permitAll()
           .anyRequest().permitAll()
+      )
+      .oauth2Login(
+        oAuth2 -> oAuth2
+          .userInfoEndpoint(
+            userInfoEndpointConfig -> userInfoEndpointConfig.userService(
+              oAuth2UserService
+            )
+          )
       )
       .sessionManagement(
         session -> session.sessionCreationPolicy(
