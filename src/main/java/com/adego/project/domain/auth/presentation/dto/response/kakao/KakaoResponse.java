@@ -31,7 +31,7 @@ public class KakaoResponse implements OAuth2Response {
   public String getName() {
     Map<String, Object> kakaoAccount = (Map<String, Object>) attribute.get("kakao_account");
     Map<String, Object> profile = (Map<String, Object>) kakaoAccount.get("profile");
-    return (String) profile.get("nickname");
+    return (String) profile.get("name");
   }
 
   public String getProfileImage() {
