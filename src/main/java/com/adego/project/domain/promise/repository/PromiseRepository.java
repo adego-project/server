@@ -6,11 +6,13 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+
 @Repository
 public interface PromiseRepository extends JpaRepository<Promise, Long> {
 
   Promise findByPromiseName(String promiseName);
 
-  @Query("SELECT u.name FROM Promise p JOIN p.user u WHERE p.id = u.id")
-  String findUserNameByUserId(User user);
+  @Query("SELECT p FROM Promise p JOIN FETCH p.user")
+  List<Promise> findAllByUser();
 }

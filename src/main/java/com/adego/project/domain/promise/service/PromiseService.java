@@ -30,12 +30,12 @@ public class PromiseService {
 
   @Transactional(readOnly = true)
   public List<PromiseResponse> get() {
-    List<Promise> lists = promiseRepository.findAll();
+    List<Promise> lists = promiseRepository.findAllByUser();
 
     List<PromiseResponse> responses = lists.stream()
       .map(
         promise -> {
-          String userName = promiseRepository.findUserNameByUserId(promise.getUser());
+          String userName = promise.getUser().getName();
 
           if(userName == null) {
             throw new AdegoException(ErrorCode.BAD_REQUEST_DTO);
