@@ -16,6 +16,7 @@ public enum ErrorCode {
   USER_NOT_CERTIFICATION(403, "로그인이 되어있지 않은 사용자입니다"),
 
   // PROMISE
+  SUCCESS_REQUEST_PROMISE(200, "성공적으로 처리되었습니다"),
   BAD_REQUEST_DTO(400, "요청정보가 잘못되었습니다"),
 
   // SERVER

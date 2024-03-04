@@ -21,7 +21,7 @@ public class PromiseService {
   private final PromiseRepository promiseRepository;
   private final UserRepository userRepository;
 
-  public ResponseEntity<String> create(PromiseUploadRequest request) {
+  public ResponseEntity<ErrorCode> create(PromiseUploadRequest request) {
     String userName = request.getUserName();
     LocalDate date = request.getPromiseDate();
     LocalTime time = request.getPromiseTime();
@@ -39,6 +39,6 @@ public class PromiseService {
       promiseRepository.save(promise);
     }
 
-    return ResponseEntity.status(200).body("성공적으로 등록되었습니다");
+    return ResponseEntity.status(200).body(ErrorCode.SUCCESS_REQUEST_PROMISE);
   }
 }

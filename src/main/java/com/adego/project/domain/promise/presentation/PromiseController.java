@@ -2,6 +2,7 @@ package com.adego.project.domain.promise.presentation;
 
 import com.adego.project.domain.promise.presentation.dto.request.PromiseUploadRequest;
 import com.adego.project.domain.promise.service.PromiseService;
+import com.adego.project.global.exception.error.ErrorCode;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -15,8 +16,8 @@ import org.springframework.web.bind.annotation.RestController;
 public class PromiseController {
   private final PromiseService promiseService;
   @PostMapping("/upload")
-  public ResponseEntity<String> promiseUpload(@RequestBody PromiseUploadRequest request) {
+  public ResponseEntity<ErrorCode> promiseUpload(@RequestBody PromiseUploadRequest request) {
     promiseService.create(request);
-    return ResponseEntity.ok("약속 등록을 성공적으로 완료하였습니다");
+    return ResponseEntity.ok(ErrorCode.SUCCESS_REQUEST_PROMISE);
   }
 }
