@@ -15,6 +15,9 @@ public enum ErrorCode {
   BAD_REQUEST_AUTH(400, "인증 요청정보가 잘못되었습니다"),
   USER_NOT_CERTIFICATION(403, "로그인이 되어있지 않은 사용자입니다"),
 
+  // PROMISE
+  BAD_REQUEST_DTO(400, "요청정보가 잘못되었습니다"),
+
   // SERVER
   INTERNAL_SERVER_ERROR(500, "내부 서버 오류가 발생했습니다");
 

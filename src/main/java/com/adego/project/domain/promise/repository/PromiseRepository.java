@@ -7,4 +7,5 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface PromiseRepository extends JpaRepository<Promise, Long> {
 
+    Promise findByPromiseName(String promiseName);
 }

@@ -11,7 +11,7 @@ spring:
 
   jpa:
     hibernate:
-      ddl-auto: create
+      ddl-auto: update
 
   security:
     oauth2:
@@ -57,3 +57,9 @@ spring:
             token-uri: https://kauth.kakao.com/oauth/token.
             user-info-uri: https://kapi.kakao.com/v2/user/me
             user-name-attribute: id
+server:
+  servlet:
+    context-path: /api
+    encoding:
+      charset: UTF-8
+      force: true
