@@ -16,6 +16,8 @@ import org.springframework.security.oauth2.core.OAuth2AuthenticationException;
 import org.springframework.security.oauth2.core.user.OAuth2User;
 import org.springframework.stereotype.Service;
 
+import javax.management.relation.Role;
+
 @Service
 @RequiredArgsConstructor
 @Slf4j
@@ -59,7 +61,7 @@ public class CustomOAuth2UserService extends DefaultOAuth2UserService {
       userDto.setUserName(userName);
       userDto.setName(oAuth2Response.getName());
       System.out.println("userDto = " + userDto);
-      return new CustomOAuth2User(userDto);
+      return new CustomOAuth2User(oAuth2Response, RoleType.ROLE_USER);
     }
 
     userExist.setEmail(oAuth2Response.getEmail());
@@ -71,6 +73,6 @@ public class CustomOAuth2UserService extends DefaultOAuth2UserService {
     userDto.setUserName(userName);
     userDto.setName(oAuth2Response.getName());
 
-    return new CustomOAuth2User(userDto);
+    return new CustomOAuth2User(oAuth2Response, RoleType.ROLE_USER);
   }
 }
