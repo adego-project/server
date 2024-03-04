@@ -19,8 +19,11 @@ public class Promise {
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   @Column(name = "promise_id")
   private Long id;
+  @Column(nullable = false)
   private String promiseName;
+  @Column(nullable = false)
   private LocalDate promiseDate;
+  @Column(nullable = false)
   private LocalTime promiseTime;
 
   private Double latitude; // 위도
