@@ -30,7 +30,7 @@ public class Promise {
   private Double longitude; // 경도
 
   @ManyToOne
-  @JoinColumn(name = "user_id")
+  @JoinColumn(name = "name")
   private User user;
 
   public void setUser(User user) {
