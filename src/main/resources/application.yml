@@ -20,6 +20,7 @@ spring:
           # 안드로이드
           google:
             client-id: 323864972402-2kgcvs5ikabbhbalvfh6k2s3ictab8ok.apps.googleusercontent.com
+            client-secret:
             redirect-uri: http://localhost:8080/login/oauth2/code/google
             authorization-grant-type: authorization_code
             client-name: google
@@ -38,10 +39,10 @@ spring:
 #              - email
           kakao:
             client-id: d1a76fca632e9b7d19fdc8b357340cc5
-            client-secret: 43E8cILng7dMWiy5GoGUj5TspXjCEtAI
-            redirect-uri: http://localhost:8080/login/oauth2/code/kakao
+            client-secret: 8l58y9r0jH524FUbjeCNSCQ1fm33sLsK
+            redirect-uri: http://localhost:8080/api/login/oauth2/code/kakao
             authorization-grant-type: authorization_code
-            client-name: kakao
+            client-name: Kakao
             scope:
               - profile_nickname
               - profile_image
@@ -59,7 +60,11 @@ spring:
             user-name-attribute: id
 server:
   servlet:
-    context-path: /api
     encoding:
       charset: UTF-8
       force: true
+    context-path: /api
+
+
+jwt:
+  secretKey: secret.key

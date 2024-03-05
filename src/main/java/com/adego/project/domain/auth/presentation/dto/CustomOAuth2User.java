@@ -14,6 +14,8 @@ import java.util.Map;
 public class CustomOAuth2User implements OAuth2User {
   private final OAuth2Response oAuth2Response;
   private final RoleType role;
+  private final String access;
+  private final String refresh;
 
 
   @Override
