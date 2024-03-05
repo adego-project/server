@@ -17,15 +17,15 @@ spring:
     oauth2:
       client:
         registration:
-#          google:
-#            client-id:
-#            client-secret:
-#            redirect-uri: http://localhost:8080/login/oauth2/code/google
-#            authorization-grant-type: authorization_code
-#            client-name: google
-#            scope:
-#              - profile
-#              - email
+          # 안드로이드
+          google:
+            client-id: 323864972402-2kgcvs5ikabbhbalvfh6k2s3ictab8ok.apps.googleusercontent.com
+            redirect-uri: http://localhost:8080/login/oauth2/code/google
+            authorization-grant-type: authorization_code
+            client-name: google
+            scope:
+              - profile
+              - email
 #          apple:
 #            client-id: {애플로부터 받은clientId}
 #            client-secret: {애플로부터 받은 key 파일}.p8
