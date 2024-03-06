@@ -23,8 +23,8 @@ public class PromiseController {
   }
 
   @PostMapping("/upload")
-  public ResponseEntity<ErrorCode> promiseUpload(@RequestBody PromiseUploadRequest request) {
+  public ResponseEntity<String> promiseUpload(@RequestBody PromiseUploadRequest request) {
     promiseService.create(request);
-    return ResponseEntity.ok(ErrorCode.SUCCESS_REQUEST_PROMISE);
+    return ResponseEntity.ok(ErrorCode.SUCCESS_REQUEST_PROMISE.getMessage());
   }
 }

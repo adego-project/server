@@ -38,7 +38,7 @@ public class PromiseService {
           String userName = promise.getUser().getName();
 
           if(userName == null) {
-            throw new AdegoException(ErrorCode.BAD_REQUEST_DTO);
+            throw new AdegoException(ErrorCode.BAD_REQUEST_DTO.getMessage());
           }
 
           return PromiseResponse.builder()
@@ -57,13 +57,13 @@ public class PromiseService {
   }
 
   @Transactional
-  public ResponseEntity<ErrorCode> create(PromiseUploadRequest request) {
+  public ResponseEntity<String> create(PromiseUploadRequest request) {
     String userName = request.getUserName();
     LocalDate date = request.getPromiseDate();
     LocalTime time = request.getPromiseTime();
 
     if(userName == null || date == null || time == null) {
-      ResponseEntity.status(400).body(ErrorCode.BAD_REQUEST_DTO);
+      ResponseEntity.status(400).body(ErrorCode.BAD_REQUEST_DTO.getMessage());
     }
 
     Promise promise = promiseRepository.findByPromiseName(request.getPromiseName());
@@ -75,6 +75,6 @@ public class PromiseService {
 //      promiseRepository.save(promise);
     }
 
-    return ResponseEntity.status(200).body(ErrorCode.SUCCESS_REQUEST_PROMISE);
+    return ResponseEntity.status(200).body(ErrorCode.SUCCESS_REQUEST_PROMISE.getMessage());
   }
 }
