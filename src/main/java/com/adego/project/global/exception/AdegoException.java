@@ -8,6 +8,5 @@ public class AdegoException extends RuntimeException {
   private ErrorCode errorCode = null;
 
   public AdegoException(String message) {
-
   }
 }

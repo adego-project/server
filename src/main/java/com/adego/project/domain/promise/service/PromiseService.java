@@ -10,7 +10,6 @@ import com.adego.project.global.exception.AdegoException;
 import com.adego.project.global.exception.error.ErrorCode;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -57,7 +56,7 @@ public class PromiseService {
   }
 
   @Transactional
-  public ResponseEntity<String> create(PromiseUploadRequest request) {
+  public ResponseEntity<ErrorCode> create(PromiseUploadRequest request) {
     String userName = request.getUserName();
     LocalDate date = request.getPromiseDate();
     LocalTime time = request.getPromiseTime();
@@ -75,6 +74,6 @@ public class PromiseService {
 //      promiseRepository.save(promise);
     }
 
-    return ResponseEntity.status(200).body(ErrorCode.SUCCESS_REQUEST_PROMISE.getMessage());
+    return ResponseEntity.status(200).body(ErrorCode.SUCCESS_REQUEST_PROMISE);
   }
 }
