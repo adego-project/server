@@ -15,6 +15,6 @@ public class PromiseResponse {
   private LocalDate promiseDate;
   private LocalTime promiseTime;
   private Double latitude; // 위도
-  private Double longitude;
+  private Double longitude; // 경도
   private String userName;
 }
