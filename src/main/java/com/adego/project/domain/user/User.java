@@ -52,12 +52,4 @@ public class User {
     this.promiseList = promiseList;
     this.role = role;
   }
-
-  public void setEmail(String email) {
-    this.email = email;
-  }
-
-  public void setName(String name) {
-    this.name = name;
-  }
 }
