@@ -11,53 +11,8 @@ spring:
 
   jpa:
     hibernate:
-      ddl-auto: update
+      ddl-auto: create-drop
 
-  security:
-    oauth2:
-      client:
-        registration:
-          # 안드로이드
-          google:
-            client-id: 323864972402-2kgcvs5ikabbhbalvfh6k2s3ictab8ok.apps.googleusercontent.com
-            client-secret:
-            redirect-uri: http://localhost:8080/login/oauth2/code/google
-            authorization-grant-type: authorization_code
-            client-name: google
-            scope:
-              - profile
-              - email
-#          apple:
-#            client-id: {애플로부터 받은clientId}
-#            client-secret: {애플로부터 받은 key 파일}.p8
-#            redirect-uri: http://localhost:8080/login/oauth2/code/apple
-#            authorization-grant-type: authorization_code
-#            client-authentication-method: POST
-#            client-name: Apple
-#            scope:
-#              - name
-#              - email
-          kakao:
-            client-id: d1a76fca632e9b7d19fdc8b357340cc5
-            client-secret: 8l58y9r0jH524FUbjeCNSCQ1fm33sLsK
-            redirect-uri: http://localhost:8080/login/oauth2/code/kakao
-            authorization-grant-type: authorization_code
-            client-name: kakao
-            scope:
-              - profile_nickname
-              - profile_image
-              - friends
-              - talk_message
-            provider: kakao
-        provider:
-          apple:
-            authorization-uri: https://appleid.apple.com/auth/authorize?scope=name%20email&response_mode=form_post
-            token-uri: https://appleid.apple.com/auth/token
-          kakao:
-            authorization-uri: https://kauth.kakao.com/oauth/authorize
-            token-uri: https://kauth.kakao.com/oauth/token.
-            user-info-uri: https://kapi.kakao.com/v2/user/me
-            user-name-attribute: id
 server:
   servlet:
     encoding:

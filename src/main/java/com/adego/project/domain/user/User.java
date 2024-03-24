@@ -9,6 +9,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import java.util.List;
+import java.util.UUID;
 
 @Entity
 @Table
@@ -16,9 +17,8 @@ import java.util.List;
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class User {
   @Id
-  @GeneratedValue(strategy = GenerationType.IDENTITY)
-  @Column(name = "user_id")
-  private Long id;
+  @GeneratedValue
+  private UUID uuid;
   private String email;
   private String name;
   private String nickname;
@@ -42,8 +42,9 @@ public class User {
   private RoleType role;
 
   @Builder
-  public User(Long id, String email, String name, String nickname, String password, String profileImage, List<Promise> promiseList, RoleType role) {
-    this.id = id;
+
+  public User(UUID uuid, String email, String name, String nickname, String password, String profileImage, List<Promise> promiseList, RoleType role) {
+    this.uuid = uuid;
     this.email = email;
     this.name = name;
     this.nickname = nickname;
