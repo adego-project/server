@@ -18,10 +18,11 @@ import java.util.UUID;
 public class User {
   @Id
   @GeneratedValue
-  private UUID uuid;
+  private String id;
+  private String provider;
+  private String providerId;
   private String email;
   private String name;
-  private String nickname;
   private String password;
   @Column(columnDefinition = "LONGBLOB")
   private String profileImage;
@@ -42,12 +43,12 @@ public class User {
   private RoleType role;
 
   @Builder
-
-  public User(UUID uuid, String email, String name, String nickname, String password, String profileImage, List<Promise> promiseList, RoleType role) {
-    this.uuid = uuid;
+  public User(String id, String provider, String providerId, String email, String name, String password, String profileImage, List<Promise> promiseList, RoleType role) {
+    this.id = id;
+    this.provider = provider;
+    this.providerId = providerId;
     this.email = email;
     this.name = name;
-    this.nickname = nickname;
     this.password = password;
     this.profileImage = profileImage;
     this.promiseList = promiseList;
