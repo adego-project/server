@@ -23,9 +23,6 @@ public class User {
   private String providerId;
   private String email;
   private String name;
-  private String password;
-  @Column(columnDefinition = "LONGBLOB")
-  private String profileImage;
 
   @OneToMany(
     mappedBy = "user",
@@ -43,14 +40,11 @@ public class User {
   private RoleType role;
 
   @Builder
-  public User(String id, String provider, String providerId, String email, String name, String password, String profileImage, List<Promise> promiseList, RoleType role) {
-    this.id = id;
+  public User(String provider, String providerId, String email, String name, List<Promise> promiseList, RoleType role) {
     this.provider = provider;
     this.providerId = providerId;
     this.email = email;
     this.name = name;
-    this.password = password;
-    this.profileImage = profileImage;
     this.promiseList = promiseList;
     this.role = role;
   }
