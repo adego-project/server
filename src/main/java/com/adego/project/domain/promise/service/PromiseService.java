@@ -10,6 +10,7 @@ import com.adego.project.global.exception.AdegoException;
 import com.adego.project.global.exception.error.ErrorCode;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -62,7 +63,7 @@ public class PromiseService {
     LocalTime time = request.getPromiseTime();
 
     if(userName == null || date == null || time == null) {
-      ResponseEntity.status(400).body(ErrorCode.BAD_REQUEST_DTO.getMessage());
+      ResponseEntity.status(HttpStatus.BAD_REQUEST).body(ErrorCode.BAD_REQUEST_DTO.getMessage());
     }
 
     Promise promise = promiseRepository.findByPromiseName(request.getPromiseName());
@@ -74,6 +75,6 @@ public class PromiseService {
 //      promiseRepository.save(promise);
     }
 
-    return ResponseEntity.status(200).body(ErrorCode.SUCCESS_REQUEST_PROMISE);
+    return ResponseEntity.status(HttpStatus.OK).body(ErrorCode.SUCCESS_REQUEST_PROMISE);
   }
 }
