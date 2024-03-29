@@ -19,7 +19,3 @@ server:
       charset: UTF-8
       force: true
     context-path: /api
-
-
-jwt:
-  secretKey: secret.key
