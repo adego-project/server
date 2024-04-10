@@ -72,7 +72,6 @@ public class PromiseService {
     if(promise == null) {
       promise = request.toEntity(user);
       user.addPromise(promise);
-//      promiseRepository.save(promise);
     }
 
     return ResponseEntity.status(HttpStatus.OK).body(ErrorCode.SUCCESS_REQUEST_PROMISE);
