@@ -5,12 +5,14 @@ import com.adego.project.domain.user.User;
 import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
 
 @Getter
 @AllArgsConstructor
+@NoArgsConstructor
 public class PromiseUploadRequest {
   @NotBlank(message = "이름은 필수값입니다")
   private String promiseName;
