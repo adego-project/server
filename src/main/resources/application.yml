@@ -1,10 +1,10 @@
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/adego?serverTimezone=UTC&characterEncoding=UTF-8
+    url: jdbc:mysql://${DB_HOST}:${DB_PORT}/${DB_NAME}?serverTimezone=UTC&characterEncoding=UTF-8
     hikari:
-      username: root
-      password: phj@3473
+      username: ${DB_USERNAME}
+      password: ${DB_PASSWORD}
 
   main:
     allow-bean-definition-overriding: true
