@@ -63,7 +63,7 @@ public class PromiseService {
     LocalTime time = request.getPromiseTime();
 
     if(userName == null || date == null || time == null) {
-      ResponseEntity.status(HttpStatus.BAD_REQUEST).body(ErrorCode.BAD_REQUEST_DTO.getMessage());
+      ResponseEntity.status(HttpStatus.BAD_REQUEST).body(ErrorCode.BAD_REQUEST_DTO);
     }
 
     Promise promise = promiseRepository.findByPromiseName(request.getPromiseName());
