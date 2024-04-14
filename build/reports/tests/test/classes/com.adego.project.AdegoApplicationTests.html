@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - AdegoApplicationTests</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>AdegoApplicationTests</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/com.adego.project.html">com.adego.project</a> &gt; AdegoApplicationTests</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">1</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.305s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">contextLoads()</td>
+<td class="success">0.305s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>13:11:45.649 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.adego.project.AdegoApplicationTests]: AdegoApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+13:11:45.704 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.adego.project.AdegoApplication for test class com.adego.project.AdegoApplicationTests
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.2.3)
+
+2024-04-14T13:11:45.903+09:00  INFO 40883 --- [    Test worker] c.adego.project.AdegoApplicationTests    : Starting AdegoApplicationTests using Java 17.0.10 with PID 40883 (started by baghyeonjun in /Users/baghyeonjun/Desktop/adego/adego)
+2024-04-14T13:11:45.904+09:00  INFO 40883 --- [    Test worker] c.adego.project.AdegoApplicationTests    : No active profile set, falling back to 1 default profile: &quot;default&quot;
+2024-04-14T13:11:46.242+09:00  INFO 40883 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-14T13:11:46.269+09:00  INFO 40883 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 23 ms. Found 2 JPA repository interfaces.
+2024-04-14T13:11:46.541+09:00  INFO 40883 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-04-14T13:11:46.577+09:00  INFO 40883 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-04-14T13:11:46.594+09:00  INFO 40883 --- [    Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-04-14T13:11:46.690+09:00  INFO 40883 --- [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-14T13:11:46.702+09:00  INFO 40883 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-04-14T13:11:46.880+09:00  INFO 40883 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@340fc1aa
+2024-04-14T13:11:46.881+09:00  INFO 40883 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-04-14T13:11:47.357+09:00  INFO 40883 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-04-14T13:11:47.408+09:00  INFO 40883 --- [    Test worker] p6spy                                    : 
+statement 3ms
+
+    ?[34mselect?[0m
+        * 
+    ?[34mfrom?[0m
+        ?[32m`adego`?[0m.?[32m`user`?[0m 
+    ?[34mwhere?[0m
+        1=0
+2024-04-14T13:11:47.412+09:00  INFO 40883 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-14T13:11:47.565+09:00  INFO 40883 --- [    Test worker] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-04-14T13:11:47.743+09:00  WARN 40883 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-04-14T13:11:47.872+09:00  INFO 40883 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@1b6daf20, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@41a3656f, org.springframework.security.web.context.SecurityContextHolderFilter@2a12048d, org.springframework.security.web.header.HeaderWriterFilter@38c840fb, org.springframework.web.filter.CorsFilter@5086e144, org.springframework.security.web.authentication.logout.LogoutFilter@4832813d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@12e8c5c4, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@27a717a7, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@557fe039, org.springframework.security.web.session.SessionManagementFilter@295e9aef, org.springframework.security.web.access.ExceptionTranslationFilter@4df9df06, org.springframework.security.web.access.intercept.AuthorizationFilter@27bfa57f]
+2024-04-14T13:11:48.041+09:00  INFO 40883 --- [    Test worker] c.adego.project.AdegoApplicationTests    : Started AdegoApplicationTests in 2.274 seconds (process running for 2.804)
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 8.5</a> at 2024. 4. 14. 오후 1:11:48</p>
+</div>
+</div>
+</body>
+</html>
