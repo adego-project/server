@@ -10,9 +10,6 @@ spring:
 
   jpa:
     hibernate:
-      properties:
-        hibernate:
-          dialect: org.hibernate.dialect.MySQL5InnoDBDialect
       ddl-auto: update
     generate-ddl: true
 
