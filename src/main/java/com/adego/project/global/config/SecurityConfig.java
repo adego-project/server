@@ -23,7 +23,7 @@ public class SecurityConfig {
       .httpBasic(AbstractHttpConfigurer::disable)
       .authorizeHttpRequests(
         auth -> auth
-          .requestMatchers("/api/**").permitAll()
+          .requestMatchers("/api/promise/read").permitAll()
           .anyRequest().permitAll()
       )
       .sessionManagement(
