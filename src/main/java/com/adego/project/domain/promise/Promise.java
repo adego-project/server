@@ -11,7 +11,6 @@ import java.time.LocalDate;
 import java.time.LocalTime;
 
 @Entity
-@Table
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class Promise {
