@@ -1,7 +1,6 @@
 package com.adego.project.domain.promise.repository;
 
 import com.adego.project.domain.promise.Promise;
-import com.adego.project.domain.user.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
