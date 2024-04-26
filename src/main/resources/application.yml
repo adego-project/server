@@ -1,9 +1,13 @@
 spring:
   datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/adego?serverTimezone=UTC&characterEncoding=UTF-8
-    username: adego
-    password: adego1234
+    url: jdbc:mysql://${DB_HOST}/adego?serverTimezone=UTC&characterEncoding=UTF-8
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+    hikari:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+  #    url:
+#    username: adego
+#    password: adego1234
 
   main:
     allow-bean-definition-overriding: true
