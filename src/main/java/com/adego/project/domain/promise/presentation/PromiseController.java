@@ -1,6 +1,7 @@
 package com.adego.project.domain.promise.presentation;
 
-import com.adego.project.domain.promise.Promise;
+
+
 import com.adego.project.domain.promise.presentation.dto.request.PromiseUploadRequest;
 import com.adego.project.domain.promise.presentation.dto.response.PromiseResponse;
 import com.adego.project.domain.promise.service.PromiseService;
